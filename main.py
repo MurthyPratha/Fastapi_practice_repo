@@ -1,7 +1,11 @@
 from fastapi import FastAPI
+from models import LocalBook
 
 
-
+lbook = [LocalBook(id=1,name='Happy Pottrt and The stone',author="J.K.Rowling",year=2001),
+         LocalBook(id=2,name='Happy Pottrt and The Secreat of chanbers',author="J.K.Rowling",year=2002),
+         LocalBook(id=3,name='Happy Pottrt and The Other of Phenix',author="J.K.Rowling",year=2004),
+         LocalBook(id=4,name='Happy Pottrt and The Goblet of fire',author="J.K.Rowling",year = 2005)]
 
 
 
@@ -16,4 +20,4 @@ def greet():
 
 @app.get("/books")
 def get_all_books():
-    return 'All books are given'
+    return lbook
