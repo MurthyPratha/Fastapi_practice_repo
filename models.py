@@ -5,3 +5,4 @@ class LocalBook(BaseModel):
     name:str
     author:str
     year:int
+    
