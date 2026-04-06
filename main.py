@@ -22,3 +22,9 @@ def greet():
 def get_all_books():
     return lbook
 
+@app.get("/book/{id}")
+def get_book_by_id(id:int):
+    for book in lbook:
+        if book.id == id:
+            return lbook[id-1]
+    return 'The Book is not found'
